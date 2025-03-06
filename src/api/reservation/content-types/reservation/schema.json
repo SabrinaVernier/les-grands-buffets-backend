@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "singularName": "reservation",
+    "pluralName": "reservations",
+    "displayName": "Reservation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hour": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "numberOfPlaces": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "date"
+    },
+    "adult": {
+      "type": "integer"
+    },
+    "child": {
+      "type": "integer"
+    },
+    "room": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "reservations"
+    },
+    "booking_date": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::booking-date.booking-date",
+      "inversedBy": "reservations"
+    }
+  }
+}

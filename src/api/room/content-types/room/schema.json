@@ -4,7 +4,8 @@
   "info": {
     "singularName": "room",
     "pluralName": "rooms",
-    "displayName": "Room"
+    "displayName": "Room",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,15 +18,22 @@
     "description1": {
       "type": "text"
     },
-    "placeAvailable": {
+    "placeAvailables": {
       "type": "integer"
     },
     "pictures": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "description2": {
+      "type": "text"
+    },
+    "description3": {
+      "type": "text"
     }
   }
 }
